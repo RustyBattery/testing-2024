@@ -27,7 +27,7 @@ class TestSolution(TestCase):
             with self.subTest(nums=n):
                 self.assertEqual(1, solution.maxProduct(data[n]))
 
-    def test_nums_length_out_of_range(self):  # ToDo добавить обработку выхода за границы
+    def test_nums_length_out_of_range(self):
         solution = Solution()
         data = {
             'nums.length=min-1': [],
@@ -61,8 +61,7 @@ class TestSolution(TestCase):
                 with self.assertRaises(AssertionError):
                     solution.maxProduct(data[n])
 
-    def test_product_in_range_max(
-            self):  # отрицательную границу можно не проверять, так как она не достяжима по свойству умножения
+    def test_product_in_range_max(self):  # отрицательную границу можно не проверять, так как она не достяжима
         solution = Solution()
         nums = [2] * 31
         max_product = solution.maxProduct(nums)
