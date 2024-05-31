@@ -78,3 +78,8 @@ class TestSolution(TestCase):
             with self.subTest(nums=n):
                 with self.assertRaises(AssertionError):
                     solution.maxProduct(data[n])
+
+    def test_num_value_is_string(self):
+        solution = Solution()
+        nums = ['a', 'b', 'c', '.', 'fjhgjek', '1']
+        self.assertRaises(TypeError, solution.maxProduct, nums)
