@@ -82,3 +82,13 @@ class TestSolution(TestCase):
         solution = Solution()
         nums = ['a', 'b', 'c', '.', 'fjhgjek', '1']
         self.assertRaises(TypeError, solution.maxProduct, nums)
+
+    def test_num_value_is_float(self):
+        solution = Solution()
+        nums = [1.5, 1.5, 1, 1, 0, -1]
+        self.assertRaises(TypeError, solution.maxProduct, nums)
+
+    def test_num_value_is_none(self):
+        solution = Solution()
+        nums = [None, 1, 1, 0, -1]
+        self.assertRaises(TypeError, solution.maxProduct, nums)

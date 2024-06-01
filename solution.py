@@ -11,6 +11,8 @@ class Solution:
         for i in range(1, len(nums)):
             if nums[i] < -10 or nums[i] > 10:
                 raise AssertionError
+            if type(nums[i]) != int:
+                raise TypeError
             curr = nums[i]
             tempMaxSoFar = max(curr, maxSoFar * curr, minSoFar * curr)
             minSoFar = min(curr, maxSoFar * curr, minSoFar * curr)
