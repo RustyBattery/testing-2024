@@ -11,7 +11,7 @@ def form():
     html = '<html lang><body><h1>Max product</h1>' \
            '<form action="/" method="POST">' \
            '<input type="text" name="data">' \
-           '<input type="submit">' \
+           '<input type="submit" id="submit-nums">' \
            '</form>' \
            '</body></html>'
     return html
